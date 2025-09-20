@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Table with thead and tfoot</title>
+  <style>
+    /* Simple, clean table styling */
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; padding: 24px; background:#f6f7fb; color:#111; }
+    .table-wrap { max-width: 900px; margin: 0 auto; background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.05); }
+    table { width: 100%; border-collapse: collapse; table-layout: auto; }
+    caption { text-align: left; font-weight: 600; margin-bottom: 8px; }
+    thead th { background: #0f62fe; color: #fff; padding: 10px 12px; text-align: left; font-size: 0.95rem; }
+    tbody td, tfoot td { padding: 10px 12px; border-bottom: 1px solid #e6e9ef; }
+    tbody tr:nth-child(even) { background: #fbfcff; }
+    tfoot td { font-weight: 700; background: #f4f7ff; border-top: 2px solid #e2e8ff; }
+    .right { text-align: right; }
+    /* responsive: horizontal scroll on small screens */
+    .scroll-x { overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <div class="table-wrap">
+    <div class="scroll-x" role="region" aria-label="Sales table">
+      <table>
+        <caption>Monthly sales — example data</caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Product</th>
+            <th scope="col">Units Sold</th>
+            <th scope="col">Unit Price (USD)</th>
+            <th scope="col" class="right">Revenue (USD)</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Alpha T-shirt</td>
+            <td>120</td>
+            <td>$12.50</td>
+            <td class="right">$1,500.00</td>
+          </tr>
+          <tr>
+            <td>Beta Mug</td>
+            <td>75</td>
+            <td>$8.00</td>
+            <td class="right">$600.00</td>
+          </tr>
+          <tr>
+            <td>Gamma Sticker Pack</td>
+            <td>240</td>
+            <td>$2.50</td>
+            <td class="right">$600.00</td>
+          </tr>
+          <tr>
+            <td>Delta Notebook</td>
+            <td>40</td>
+            <td>$10.00</td>
+            <td class="right">$400.00</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td>Total</td>
+            <td>475</td>
+            <td></td>
+            <td class="right">$3,100.00</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
